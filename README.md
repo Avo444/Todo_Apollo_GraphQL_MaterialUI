@@ -1,35 +1,32 @@
-
 ---
-
 # 📝 Todo App (React + Apollo Client + GraphQL)
 
 A simple Todo application built with **React**, **Apollo Client**, **GraphQL**, and **Material UI**.
 It supports creating, updating, deleting, and toggling todos with real-time cache updates.
-
 ---
 
 ## 🚀 Features
 
-* ➕ Add new todos
-* ✏️ Edit existing todos
-* ❌ Delete todos
-* ✅ Mark todos as completed
-* ⚡ Apollo Client cache updates (no refetch needed)
-* 🎨 Styled with Material UI + Emotion
-* 🌐 GraphQL API using `json-graphql-server`
+- ➕ Add new todos
+- ✏️ Edit existing todos
+- ❌ Delete todos
+- ✅ Mark todos as completed
+- ⚡ Apollo Client cache updates (no refetch needed)
+- 🎨 Styled with Material UI + Emotion
+- 🌐 GraphQL API using `json-graphql-server`
 
 ---
 
 ## 🧱 Tech Stack
 
-* React 19
-* Apollo Client 4
-* GraphQL
-* React Router DOM
-* Material UI (MUI)
-* Emotion (styled components)
-* Vite
-* json-graphql-server (mock backend)
+- React 19
+- Apollo Client 4
+- GraphQL
+- React Router DOM
+- Material UI (MUI)
+- Emotion (styled components)
+- Vite
+- json-graphql-server (mock backend)
 
 ---
 
@@ -57,8 +54,8 @@ src/
 ### 1. Clone the repository
 
 ```bash
-git clone <your-repo-url>
-cd todo
+git clone https://github.com/Avo444/Todo_Apollo_GraphQL_MaterialUI.git
+cd Todo_Apollo_GraphQL_MaterialUI
 ```
 
 ### 2. Install dependencies
@@ -111,11 +108,11 @@ VITE_BACKEND_API="http://localhost:3000"
 
 ```graphql
 query {
-  allTodos {
-    id
-    title
-    isCompleted
-  }
+    allTodos {
+        id
+        title
+        isCompleted
+    }
 }
 ```
 
@@ -125,11 +122,11 @@ query {
 
 ```graphql
 mutation CreateTodo($title: String!, $isCompleted: Boolean!) {
-  createTodo(title: $title, isCompleted: $isCompleted) {
-    id
-    title
-    isCompleted
-  }
+    createTodo(title: $title, isCompleted: $isCompleted) {
+        id
+        title
+        isCompleted
+    }
 }
 ```
 
@@ -137,11 +134,11 @@ mutation CreateTodo($title: String!, $isCompleted: Boolean!) {
 
 ```graphql
 mutation UpdateTodo($id: ID!, $title: String, $isCompleted: Boolean) {
-  updateTodo(id: $id, title: $title, isCompleted: $isCompleted) {
-    id
-    title
-    isCompleted
-  }
+    updateTodo(id: $id, title: $title, isCompleted: $isCompleted) {
+        id
+        title
+        isCompleted
+    }
 }
 ```
 
@@ -149,9 +146,9 @@ mutation UpdateTodo($id: ID!, $title: String, $isCompleted: Boolean) {
 
 ```graphql
 mutation RemoveTodo($id: ID!) {
-  removeTodo(id: $id) {
-    id
-  }
+    removeTodo(id: $id) {
+        id
+    }
 }
 ```
 
@@ -161,10 +158,10 @@ mutation RemoveTodo($id: ID!) {
 
 Custom Material UI theme:
 
-* Primary: `#9D6638`
-* Secondary: `#B0BA99`
-* Background: `#F7F1DE`
-* Font: `Raleway`
+- Primary: `#9D6638`
+- Secondary: `#B0BA99`
+- Background: `#F7F1DE`
+- Font: `Raleway`
 
 ---
 
@@ -172,10 +169,10 @@ Custom Material UI theme:
 
 ```js
 export const client = new ApolloClient({
-  link: new HttpLink({
-    uri: import.meta.env.VITE_BACKEND_API,
-  }),
-  cache: new InMemoryCache(),
+    link: new HttpLink({
+        uri: import.meta.env.VITE_BACKEND_API,
+    }),
+    cache: new InMemoryCache(),
 });
 ```
 
@@ -195,9 +192,9 @@ npm run lint     # Run ESLint
 
 ## 📌 Notes
 
-* This project uses **Apollo cache updates** instead of refetching queries.
-* Backend is a mock server (`json-graphql-server`).
-* Designed for learning GraphQL + React architecture.
+- This project uses **Apollo cache updates** instead of refetching queries.
+- Backend is a mock server (`json-graphql-server`).
+- Designed for learning GraphQL + React architecture.
 
 ---
 
